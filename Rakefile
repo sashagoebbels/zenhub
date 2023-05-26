@@ -8,7 +8,7 @@ task :build_gem do
 end
 
 desc 'Install the gem file'
-task :install_gem do
+task :install_gem => :build_gem do
   sh "gem install ./zenhub-#{Zenhub::VERSION}.gem"
 end
 
